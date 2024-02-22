@@ -1,0 +1,5 @@
+helloooo copyyy fixes:
+1. b_open RDOnly flags now get set off (we needed to add parenthesis)
+2. b_read needs to call getNextBlock when incrementing the currBlock we cant just say curBlock +=1;
+3. b_open has two fields to keep track of current block for b_read, but b_read only uses the one named blockOffset
+4. wrote parent directory again in b_close() because b_write modifies the fileSize field in thee
